@@ -4,8 +4,8 @@ Class {
 	#category : #'MyShapes-Shapes'
 }
 
-{ #category : #printing }
-DirectShape >> printOn: aStream [ 
+{ #category : #accessing }
+DirectShape >> className [ 
 self subclassResponsibility 
 ]
 

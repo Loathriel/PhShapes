@@ -19,6 +19,11 @@ Rect >> area [
  ^ a * b
 ]
 
+{ #category : #'row/column operations' }
+Rect >> diagonal [
+^ (a squared + b squared) sqrt
+]
+
 { #category : #initialization }
 Rect >> initialize [
 	a := 3.

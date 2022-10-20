@@ -41,11 +41,6 @@ Parallelogram >> b: aNumber [
 b := aNumber max: 0.01
 ]
 
-{ #category : #'row/column operations' }
-Parallelogram >> diagonal [
-^ (a squared + b squared - (2 * a * b * gamma cos)) sqrt
-]
-
 { #category : #accessing }
 Parallelogram >> gamma [
 
@@ -67,4 +62,16 @@ Parallelogram >> initialize [
 { #category : #accessing }
 Parallelogram >> perimeter [
 ^ (a + b) * 2
+]
+
+{ #category : #printing }
+Parallelogram >> printOn: aStream [
+
+aStream nextPutAll: 'Parallelogram['.
+a printOn: aStream .
+aStream nextPut: $,.
+b printOn: aStream .
+aStream nextPut: $,.
+gamma printOn: aStream .
+aStream nextPut: $]
 ]

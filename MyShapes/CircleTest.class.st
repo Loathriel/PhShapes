@@ -27,7 +27,7 @@ self assert: largerCircle area equals: 25 * pi.
 ]
 
 { #category : #tests }
-CircleTest >> testLength [
+CircleTest >> testLength [ 
 
 self assert: circle length equals: pi + pi.
 self assert: largerCircle length equals: 10 * pi.

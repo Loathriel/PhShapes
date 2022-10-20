@@ -4,17 +4,13 @@ Class {
 	#category : #'MyShapes-Shapes'
 }
 
+{ #category : #accessing }
+Cylinder >> className [
+	^ self class name asString
+]
+
 { #category : #initialization }
 Cylinder >> initialize [ 
  base := Circle new.
  height := 1
-]
-
-{ #category : #printing }
-Cylinder >> printOn: aStream [
-
-aStream nextPutAll: 'Cylinder of height '.
-height printOn: aStream .
-aStream nextPutAll: ' on '.
-base printOn: aStream 
 ]

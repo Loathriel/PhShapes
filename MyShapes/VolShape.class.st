@@ -13,6 +13,16 @@ VolShape >> baseArea [
 ^ base area 
 ]
 
+{ #category : #printing }
+VolShape >> printOn: aStream [
+	self className printOn: aStream.
+	aStream nextPutAll: ' with height '.
+	height printOn: aStream.
+	aStream nextPutAll: ' on '.
+	base printOn: aStream 
+			
+]
+
 { #category : #calculations }
 VolShape >> sideArea [ 
 ^ self subclassResponsibility 
@@ -20,7 +30,7 @@ VolShape >> sideArea [
 
 { #category : #calculations }
 VolShape >> totalArea [ 
-^ self subclassResponsibility 
+self subclassResponsibility 
 ]
 
 { #category : #calculations }

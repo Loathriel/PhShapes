@@ -23,6 +23,12 @@ self assert: r area equals: 20.
 ]
 
 { #category : #tests }
+RectTest >> testDiagonal [
+
+self assert: (Rect width: 3 height: 4) diagonal equals: 5
+]
+
+{ #category : #tests }
 RectTest >> testInitialize [
 
 | r |
