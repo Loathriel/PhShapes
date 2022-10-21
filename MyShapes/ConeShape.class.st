@@ -8,3 +8,9 @@ Class {
 ConeShape >> totalArea [ 
 	^ self sideArea + self baseArea 
 ]
+
+{ #category : #calculations }
+ConeShape >> volume [
+
+^ self baseArea * height / 3
+]

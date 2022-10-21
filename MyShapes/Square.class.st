@@ -21,6 +21,18 @@ Square class >> width: a height: b [
 ^ self error: 'Use side: to create a square' 
 ]
 
+{ #category : #accessing }
+Square >> a: aNumber [
+
+b := a := aNumber max: 0.1
+]
+
+{ #category : #accessing }
+Square >> b: aNumber [
+
+self error: 'Can''t change b in ', self className 
+]
+
 { #category : #calculating }
 Square >> inR [
 ^ self a / 2

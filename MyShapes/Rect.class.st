@@ -24,6 +24,12 @@ Rect >> diagonal [
 ^ (a squared + b squared) sqrt
 ]
 
+{ #category : #accessing }
+Rect >> gamma: anAngle [
+
+self error: 'Can''t change gamma in ', self className
+]
+
 { #category : #initialization }
 Rect >> initialize [
 	a := 3.

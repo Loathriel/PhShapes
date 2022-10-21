@@ -8,9 +8,33 @@ Class {
 	#category : #'MyShapes-Shapes'
 }
 
+{ #category : #accessing }
+VolShape >> base [
+
+	^ base
+]
+
+{ #category : #accessing }
+VolShape >> base: anObject [
+
+	base := anObject
+]
+
 { #category : #calculations }
 VolShape >> baseArea [ 
 ^ base area 
+]
+
+{ #category : #accessing }
+VolShape >> height [
+
+	^ height
+]
+
+{ #category : #accessing }
+VolShape >> height: anObject [
+
+	height := anObject
 ]
 
 { #category : #printing }
