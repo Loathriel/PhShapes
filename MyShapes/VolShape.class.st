@@ -39,7 +39,7 @@ VolShape >> height: anObject [
 
 { #category : #printing }
 VolShape >> printOn: aStream [
-	self className printOn: aStream.
+	aStream nextPutAll: self className.
 	aStream nextPutAll: ' with height '.
 	height printOn: aStream.
 	aStream nextPutAll: ' on '.

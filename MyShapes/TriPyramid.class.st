@@ -7,7 +7,7 @@ Class {
 { #category : #'as yet unclassified' }
 TriPyramid class >> base: aTriangle height: aNumber [
 
-(aTriangle isKindOf: Parallelogram) 
+(aTriangle isKindOf: Triangle) 
 ifTrue: [ ^ self new base: aTriangle; height: (aNumber max: 0.1) ]
 ifFalse: [ self error: 'Base of a triangular pyramid must be a triangle' ]
 ]

@@ -22,7 +22,7 @@ Triangle >> a: aNumber [
 
 { #category : #calculating }
 Triangle >> area [ 
-^ a * b * gamma sin / 2 
+^ a * b * self gammaToRadians sin / 2 
 ]
 
 { #category : #accessing }
@@ -32,7 +32,12 @@ Triangle >> b: aNumber [
 
 { #category : #accessing }
 Triangle >> gamma: aNumber [ 
-	gamma := ((aNumber max: 1) min: 179) degreesToRadians.
+	gamma := (aNumber max: 1) min: 179.
+]
+
+{ #category : #'as yet unclassified' }
+Triangle >> gammaToRadians [
+	^ gamma degreesToRadians 
 ]
 
 { #category : #calculating }
@@ -44,7 +49,7 @@ Triangle >> inR [
 Triangle >> initialize [ 
 a := 3.
 b := 3.
-gamma := 60 degreesToRadians.
+gamma := 60.
 ]
 
 { #category : #calculating }
@@ -65,5 +70,5 @@ aStream nextPut: $>
 
 { #category : #private }
 Triangle >> sideC [
-^ (a squared + b squared - (2 * a * b * gamma cos)) sqrt
+^ (a squared + b squared - (2 * a * b * self gammaToRadians cos)) sqrt
 ]

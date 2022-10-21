@@ -11,7 +11,7 @@ Rect class >> newWithSideA: aNumber andSideB: bNumber andGamma: grad [
 
 { #category : #'instance creation' }
 Rect class >> width: w height: h [
-^ super newWithSideA: w andSideB: h andGamma: 90
+^ self new a: w; b: h.
 ]
 
 { #category : #calculating }
@@ -34,7 +34,7 @@ self error: 'Can''t change gamma in ', self className
 Rect >> initialize [
 	a := 3.
 	b := 4.
-	gamma := 90 degreesToRadians.
+	gamma := 90.
 ]
 
 { #category : #'as yet unclassified' }

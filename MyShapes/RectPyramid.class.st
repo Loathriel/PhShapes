@@ -30,9 +30,9 @@ RectPyramid >> sideArea [
 " ha - висота до сторони а
   hb - висота до сторони b
 "
-sin := base gammaInRadians sin.
-ha := base a * sin / 2.
-hb := base b * sin / 2.
+sin := base gammaToRadians sin.
+ha := base b * sin / 2.
+hb := base a * sin / 2.
 la := (ha squared + height squared) sqrt.
 lb := (hb squared + height squared) sqrt.
 

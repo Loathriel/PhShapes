@@ -12,7 +12,7 @@ Square class >> newWithSideA: aNumber andSideB: bNumber andGamma: grad [
 { #category : #accessing }
 Square class >> side: w [
 "^ self new a: w; b: w"
-^super width: w height: w
+^self new a: w.
 ]
 
 { #category : #'instance creation' }
@@ -42,7 +42,7 @@ Square >> inR [
 Square >> initialize [ 
 	a := 5. 
 	b := 5.
-	gamma := 90 degreesToRadians.
+	gamma := 90.
 ]
 
 { #category : #printing }
