@@ -8,6 +8,9 @@ Class {
 SquareTest >> testCreation [ 
 self assert: (Square side: 3) a equals: 3.
 self assert: (Square side: 7) b equals: 7.
+
+self should: [ Square newWithSideA: 2 andSideB: 3 andGamma: 4 ] raise: Error.
+self should: [ Square width: 2 height: 3 ] raise: Error.
 ]
 
 { #category : #tests }

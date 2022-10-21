@@ -27,7 +27,7 @@ a := aNumber max: 0.01
 
 { #category : #calculating }
 Parallelogram >> area [ 
-^ a * b * gamma sin
+^ a * b * self gammaToRadians sin
 ]
 
 { #category : #accessing }
@@ -49,14 +49,19 @@ Parallelogram >> gamma [
 
 { #category : #accessing }
 Parallelogram >> gamma: aNumber [
-gamma := ((aNumber max: 0.01) min: 179.99) degreesToRadians 
+gamma := ((aNumber max: 0.01) min: 179.99)
+]
+
+{ #category : #'as yet unclassified' }
+Parallelogram >> gammaToRadians [
+	^ gamma degreesToRadians 
 ]
 
 { #category : #initialization }
 Parallelogram >> initialize [ 
 	a := 3.
 	b := 4.
-	gamma := 90 degreesToRadians.
+	gamma := 90.
 ]
 
 { #category : #accessing }

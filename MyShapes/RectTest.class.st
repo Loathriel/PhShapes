@@ -20,6 +20,8 @@ r := Rect width: 5 height: 4.
 self assert: r a equals: 5.
 self assert: r b equals: 4.
 self assert: r area equals: 20.
+
+self should: [ Rect newWithSideA: 2 andSideB: 3 andGamma: 4 ] raise: Error.
 ]
 
 { #category : #tests }
